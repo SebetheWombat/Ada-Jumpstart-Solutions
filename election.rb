@@ -10,7 +10,7 @@ n = "I am not an int!"
 puts "Time to elect a hero!"
 puts "The candidates are: Jess Jones, Bruce Wayne, Matt Murdock.\n\n"
 
-#Keep prompting for number of votes until there are no none digit characters in response
+#Keep prompting for number of votes until there are no non-digit characters in response
 while /\D/.match(n) do
   puts "How many votes are being cast today? "
   n = gets.chomp
@@ -48,9 +48,7 @@ candidates.each do |key, votes|
   end
   #Display summary of results
   puts "#{name * " "}: #{votes} #{propGram}"
-  #numToBeat keeps track of winning vote number.
-  #If current key equals numToBeat there is a tie.
-  #If current key has more votes, they replace the current winner.
+  #numToBeat keeps track of winning vote number. If current key equals numToBeat there is a tie. If current key has more votes, they replace the current winner.
   if votes == numToBeat
     winner += " and #{name * " "}"
   elsif votes > numToBeat
